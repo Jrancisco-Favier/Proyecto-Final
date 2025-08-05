@@ -6,7 +6,7 @@
 
 body {
     font-family: 'Roboto', sans-serif;
-    background: linear-gradient(45deg, #ff494f 0%, #ffa32bdc 50%, #dfdb14 100%);
+    background: linear-gradient(45deg, #73ff00 0%, #a7f169 50%, #ffffff 100%);
     min-height: 100vh;
 }
 
@@ -31,66 +31,77 @@ nav {
 .superior{
     font-size: 1.8rem;
     font-weight: bold;
-    color: #e91e63;
+    color: #f3cd25;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 .logo {
-    position:initial;
     top: 0px;
-    right: 20px;
-    height: 55px;
+    right: 0px;
+    height: 70px;
+    width: auto;
+}
+
+.logo2 {
+    top: 0px;
+    left: 0px;
+    height: 71px;
     width: auto;
 }
 
 .menu {
-    display:contents;
     list-style: none;
-    gap: 2rem;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    gap: 20px; 
+    align-items: center;
 }
 
-.menu li a {
+.menu li {
+    display: inline;
+}
+
+.menu a {
     text-decoration: none;
-    color: #333;
-    font-weight: 500;
-    padding: 10px 20px;
-    border-radius: 30px;
-    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-    position: relative;
+    color: #222;
+    font-weight: bold;
+    padding: 8px 12px;
+    transition: background 0.2s, color 0.2s;
 }
 
-.menu li a:hover {
-    background: linear-gradient(45deg, #f5f5f5, #4ed3cc);
-    color: rgb(0, 0, 0);
-    transform: scale(1.05);
-    box-shadow: 0 8px 25px rgba(34, 34, 34, 0.3);
+.menu a:hover,
+.menu .registrarse-link:hover {
+    background: #f0f0f0;
+    color:#5eb805;
+    border-radius: 4px;
 }
 
-.hamburger {
+.algo {
     display: none;
     flex-direction: column;
     cursor: pointer;
     padding: 10px;
 }
 
-.hamburger span {
+.algo span {
     width: 25px;
     height: 3px;
-    background-color: #e91e63;
+    background-color: #f8f53f;
     margin: 3px 0;
     transition: all 0.3s ease;
     border-radius: 2px;
 }
 
-.hamburger.active span:nth-child(1) {
+.algo.active span:nth-child(1) {
     transform: rotate(45deg) translate(6px, 6px);
 }
 
-.hamburger.active span:nth-child(2) {
+.algo.active span:nth-child(2) {
     opacity: 0;
 }
 
-.hamburger.active span:nth-child(3) {
+.algo.active span:nth-child(3) {
     transform: rotate(-45deg) translate(6px, -6px);
 }
 
@@ -159,7 +170,7 @@ nav {
 .content h1 {
     font-size: 3rem;
     margin-bottom: 20px;
-    background: linear-gradient(45deg, #e91e63, #9c27b0);
+    background: linear-gradient(4deg, #4e4e4e, #000000);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
@@ -170,7 +181,7 @@ nav {
         display: none;
     }
     
-    .hamburger {
+    .algo {
         display: flex;
     }
 
@@ -181,4 +192,20 @@ nav {
     header {
         padding: 1rem;
     }
+}
+.registrarse {
+    background-color: #ffee00;
+    color: rgb(0, 0, 0);
+    padding: 10px 20px;
+    border: none;
+    font-weight: bold;
+    cursor: pointer;
+    border-radius: 20px;
+    transition: background-color 0.3s, transfor 0.3s;
+    font-size: 1.5ch;
+}
+
+.registrarse:hover {
+    background-color: #e5ff00;
+    transition: background-color 1.1s; transform: 1s;
 }

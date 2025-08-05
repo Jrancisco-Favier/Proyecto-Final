@@ -3,52 +3,28 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Menú Hamburger Responsive</title>
+    <title>Index Iliana</title>
     <link rel="stylesheet" href="static/css/index.css" />
+    <link rel="icon" href="static/img/icono.ico" type="image/x-icon" />
 </head>
 <body>
     <header>
         <nav>
-            <div>
-                <a href="index.html">
-                    <img src='static/img/logo.jpg' class="logo">
-                </a>
-            </div>
+            <a href="index.html">
+                <img src="static/img/logo.jpg" alt="Logo Iliana" class="logo">
+            </a>
             <ul class="menu">
                 <li><a href="index.html">Inicio</a></li>
-                <li><a href="#servicios">Servicios</a></li>
-                <li><a href="#productos">Productos</a></li>
-                <li><a href="#contacto">Contacto</a></li>
+                <li><a href="productos.html">Productos</a></li>
+                <li><a href="contacto.html">Contactanos</a></li>
+                <li><a href="carrito.html">🛒</a></li>
+                <li><a href="registrarse.html" class="registrarse-link">Registrarse</a></li>
             </ul>
-            <div class="hamburger" onclick="toggleMenu()">
-                <span></span>
-                <span></span>
-                <span></span>
-            </div>
-            <div class="mobile-menu" id="mobileMenu">
-                <ul>
-                    <li><a href="index.html">Inicio</a></li>
-                    <li><a href="#servicios">Servicios</a></li>
-                    <li><a href="#productos">Productos</a></li>
-                    <li><a href="#contacto">Contacto</a></li>
-                </ul>
-            </div>
         </nav>
     </header>
-
     <div class="content">
-        <h1>Menú Hamburger Responsive</h1>
-        <p>Este menú se adapta automáticamente a dispositivos móviles y tablets. Redimensiona la ventana para ver el efecto hamburger.</p>
+        <h1>Bienvenido a Iliana</h1>
+        <p>Página principal de Iliana</p>
     </div>
-
-    <script>
-        function toggleMenu() {
-            const hamburger = document.querySelector('.hamburger');
-            const mobileMenu = document.getElementById('mobileMenu');
-            
-            hamburger.classList.toggle('active');
-            mobileMenu.classList.toggle('active');
-        }
-    </script>
 </body>
 </html>
