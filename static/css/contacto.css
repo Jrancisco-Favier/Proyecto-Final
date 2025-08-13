@@ -1,0 +1,90 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: linear-gradient(to top right, #7fff00, #e5ffcc);
+}
+
+header {
+    background-color: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(10px);
+    padding: 1rem 2rem;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 20px rgba(0, 0, 0, 0.1);
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 24px 48px 0 48px;
+}
+
+.logo {
+    height: 70px;
+    width: auto;
+    margin-right: 40px;
+}
+
+.menu {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    gap: 48px;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+.menu li {
+    display: inline;
+}
+
+.menu a {
+    text-decoration: none;
+    color: #222;
+    font-weight: bold;
+    padding: 8px 12px;
+    transition: background 0.2s, color 0.2s;
+}
+
+.menu a:hover,
+.menu .registrarse-link:hover {
+    background: #f0f0f0;
+    color:#5eb805;
+    border-radius: 4px;
+}
+
+main {
+  padding: 40px;
+  text-align: center;
+}
+
+h2 {
+  color: #252b2c;
+}
+
+.formulario-contacto input,
+.formulario-contacto textarea {
+  display: block;
+  margin: 15px auto;
+  padding: 10px;
+  width: 80%;
+  border-radius: 10px;
+  border: 1px solid #ccc;
+}
+
+textarea {
+  resize: vertical;
+  height: 100px;
+}
+
+.formulario-contacto button {
+  background: yellow;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 10px;
+  cursor: pointer;
+  margin-top: 10px;
+}
