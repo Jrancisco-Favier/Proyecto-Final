@@ -56,23 +56,18 @@ nav {
     border-radius: 4px;
 }
 
-main {
-  padding: 40px;
-  text-align: center;
-}
 
 h2 {
   color: #252b2c;
 }
 
-.formulario-contacto input,
-.formulario-contacto textarea {
+.formulario-contacto{
   display: block;
-  margin: 15px auto;
+  margin: 80px auto;
   padding: 10px;
-  width: 80%;
+  width: 100%;
   border-radius: 10px;
-  border: 1px solid #ccc;
+  border: 5px solid #ffffff;
 }
 
 textarea {

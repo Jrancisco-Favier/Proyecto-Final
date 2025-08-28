@@ -272,6 +272,11 @@ form {
   flex-direction: column;
 }
 
+main {
+  padding: 10px;
+  text-align: center;
+}
+
 /* =======================
    FOOTER
 ======================= */
