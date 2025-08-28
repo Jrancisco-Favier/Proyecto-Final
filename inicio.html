@@ -2,10 +2,10 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8">
-  <title>Contacto</title>
-  <link rel="stylesheet" href="static/css/contacto.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Iniciar</title>
+  <link rel="stylesheet" href="static/css/inicio.css">
   <link rel="stylesheet" href="static/css/todos.css">
-  <link rel="icon" href="static/img/icono.ico" type="image/x-icon" />
 </head>
 <body>
   <header>
@@ -24,16 +24,24 @@
         </ul>
     </nav>
   </header>
-  <main>
-    <h2>Contáctanos</h2>
-    <form class="formulario-contacto">
-      <input type="text" placeholder="Tu nombre" required>
-      <input type="email" placeholder="Tu correo" required>
-      <textarea placeholder="Mensaje" required></textarea>
-      <button type="submit">Enviar</button>
+  <br>
+  <main class="form-container">
+    <form action="#" method="post">
+
+      <label for="correo">Correo:</label>
+      <input type="email" id="correo" name="correo" required>
+
+      <label for="contrasena">Contraseña:</label>
+      <input type="password" id="contrasena" name="contrasena" required>
+
+      <div class="botones">
+        <a href="index.html" class="volver">Volver</a>
+        <button type="submit" class="iniciar">iniciar sesion</button>
+      </div>
     </form>
   </main>
 </body>
+<br>
 <footer>
     <p>
         IANA <br>

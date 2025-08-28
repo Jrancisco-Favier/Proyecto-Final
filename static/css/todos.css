@@ -1,0 +1,312 @@
+/* =======================
+   RESETEO Y BASE
+======================= */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    min-height: 100vh;
+    font-family: 'Roboto', Arial, sans-serif;
+    background: linear-gradient(to top right, #7fff00, #e5ffcc);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* =======================
+   HEADER Y NAVEGACIÓN
+======================= */
+header {
+    background-color: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(10px);
+    padding: 1rem 2rem;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 20px rgba(0, 0, 0, 0.1);
+    width: 100%;
+}
+
+.precio {
+    text-align: center;
+    font-size: 2rem;
+    font-weight: bold;
+    color: #4CAF50;
+    margin-bottom: 20px;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 24px 48px 0 48px;
+}
+
+.logo {
+  position: absolute;
+  left: 20px;
+  top: 5px;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+}
+
+.superior {
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: #f3cd25;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Menú principal */
+.menu {
+    list-style: none;
+    display: flex;
+    gap: 48px;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+.menu li {
+    display: inline;
+}
+
+.menu a {
+    text-decoration: none;
+    color: #222;
+    font-weight: bold;
+    padding: 8px 12px;
+    transition: background 0.2s, color 0.2s;
+}
+
+.menu a:hover,
+.menu .registrarse-link:hover {
+    background: #f0f0f0;
+    color: #5eb805;
+    border-radius: 4px;
+}
+
+/* =======================
+   BOTONES Y LINKS
+======================= */
+.inicio-link {
+    background-color: rgb(156, 247, 103);
+    color: black;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.registrarse-link {
+    background-color: rgb(116, 197, 70);
+    color: black;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.registrarse {
+    background-color: #ffee00;
+    color: black;
+    padding: 10px 20px;
+    border: none;
+    font-weight: bold;
+    cursor: pointer;
+    border-radius: 20px;
+    transition: background-color 0.3s, transform 0.3s;
+    font-size: 1.5ch;
+}
+
+.registrarse:hover {
+    background-color: #e5ff00;
+}
+
+/* =======================
+   CONTENIDO
+======================= */
+.content {
+    padding: 50px 20px;
+    text-align: center;
+    color: #333;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.content h1 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+    background: linear-gradient(4deg, #4e4e4e, #000000);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+h2 {
+    color: #252b2c;
+}
+
+p {
+    font-size: 1.1em;
+    color: #ffffff;
+    margin-top: 20px;
+}
+
+/* =======================
+   SECCIONES EXTRA
+======================= */
+.empresa-container {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    padding: 5px;
+}
+
+.vision-contenido {
+    text-align: center;
+    background-color: rgba(182, 255, 64, 0.8);
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s;
+    color:#000000
+}
+
+.mision,
+.titulo {
+    text-align: center;
+}
+
+/* Productos */
+.productos {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 30px;
+    flex-wrap: wrap;
+}
+
+.producto {
+    background: white;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    width: 180px;
+    text-align: center;
+    transition: transform 0.3s;
+}
+
+.img_venta {
+    width: 100px;
+    height: 100px;
+    border-radius: 1cm;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    margin-bottom: 20px;
+    transition: transform 0.3s;
+}
+
+.img_venta:hover {
+    transform: scale(1.1);
+}
+
+.boton-comprar {
+    background-color: rgb(102, 93, 92);
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.boton-comprar:hover {
+    background-color: rgb(122, 111, 110);
+}
+
+/* =======================
+   FORMULARIOS
+======================= */
+.formulario-contacto input,
+.formulario-contacto textarea {
+    display: block;
+    margin: 15px auto;
+    padding: 10px;
+    width: 80%;
+    border-radius: 10px;
+    border: 1px solid #ccc;
+}
+
+textarea {
+    resize: vertical;
+    height: 100px;
+}
+
+.formulario-contacto button {
+    background: yellow;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 10px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+.form-container {
+  background-color: #f2ffe6;
+  padding: 30px;
+  border-radius: 15px;
+  width: 300px;
+  margin-top: 1px;
+  box-shadow: 0 0 30px rgba(0,0,0,0.2);
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+/* =======================
+   FOOTER
+======================= */
+footer {
+    color: white;
+    background-color: rgb(59, 99, 36);
+    text-align: center;
+    width: 100%;
+}
+
+
+/* =======================
+   ANIMACIONES
+======================= */
+.zoom-in {
+    transform: scale(0);
+    opacity: 0;
+    animation: zoomIn 1s forwards;
+}
+
+@keyframes zoomIn {
+    to {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+/* =======================
+   RESPONSIVE
+======================= */
+@media (max-width: 768px) {
+    .content h1 {
+        font-size: 2rem;
+    }
+    header {
+        padding: 1rem;
+    }
+}

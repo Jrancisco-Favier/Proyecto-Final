@@ -88,3 +88,21 @@ textarea {
   cursor: pointer;
   margin-top: 10px;
 }
+
+.inicio-link {
+    background-color: rgb(156, 247, 103);
+    color: black;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.registrarse-link {
+    background-color: rgb(116, 197, 70);
+    color: black;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+}

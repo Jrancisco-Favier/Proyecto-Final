@@ -4,16 +4,6 @@ body {
   background: linear-gradient(to top right, #7fff00, #e5ffcc);
 }
 
-header {
-    background-color: rgba(255, 255, 255, 0.95);
-    backdrop-filter: blur(10px);
-    padding: 1rem 2rem;
-    position: sticky;
-    top: 0;
-    z-index: 1000;
-    box-shadow: 0 2px 20px rgba(0, 0, 0, 0.1);
-}
-
 nav {
     display: flex;
     align-items: center;
@@ -80,4 +70,73 @@ h2 {
   box-shadow: 0 4px 8px rgba(0,0,0,0.1);
   width: 180px;
   text-align: center;
+}
+
+.inicio-link {
+    background-color: rgb(156, 247, 103);
+    color: black;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.registrarse-link {
+    background-color: rgb(116, 197, 70);
+    color: black;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+
+
+.img_venta{
+    width: 100px;
+    height: 100px;
+    border-radius: 1cm;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    margin-bottom: 20px}
+.titulo{
+    text-align: center}
+.productos-container{
+    display: flex;
+    flex-direction: row;
+    flex-wrap:nowrap;
+    justify-content: center;
+    gap: 10px;
+    padding: 5px;}
+.producto-contenido{
+    text-align: center;
+    background-color: rgba(255, 255, 255, 0.8);
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s;}
+.img_venta:hover{
+    transform: scale(1.1);}
+.producto{
+    text-align: center;}
+.boton-comprar{
+    background-color: rgb(102, 93, 92);
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;}
+.boton-comprar:hover{   
+    background-color: rgb(122, 111, 110);}
+.zoom-in {
+transform: scale(0);
+opacity: 0;
+
+animation: zoomIn 1s forwards;
+}
+@keyframes zoomIn {
+to {
+transform: scale(1);
+opacity: 1;
+}
 }

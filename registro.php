@@ -2,7 +2,7 @@
 $host = 'localhost';
 $usuario = 'root';
 $clave = '';
-$bd = 'iliana';
+$bd = 'iana';
 
 $conn = new mysqli($host, $usuario, $clave, $bd);
 
@@ -12,11 +12,13 @@ if ($conn->connect_error) {
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
+    $nombre = trim($_POST['nombre'] ?? '');
     $correo = trim($_POST['correo'] ?? '');
-    $contrasena = trim($_POST['contraseña'] ?? '');
-    $nombre_completo = trim($_POST['nombre'] ?? '');
+    $contrasena = trim($_POST['contrasena'] ?? '');
+    $numero = trim($_POST['numero'] ?? '');
+    $direccion = trim($_POST['direccion'] ?? '');
 
-    if ($correo == '' || $contrasena == '' || $nombre_completo == '') {
+    if ($nombre == '' || $correo == '' || $contrasena == '' || $numero == '' || $direccion == '') {
         echo "<script>alert('Faltan datos en el formulario');window.location.href='registro.html';</script>";
         exit;
     }
@@ -26,7 +28,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         exit;
     }
 
-    $verificar = $conn->prepare("SELECT id FROM usuarios WHERE correo = ?");
+    $verificar = $conn->prepare("SELECT id FROM usuario WHERE correo = ?");
     $verificar->bind_param("s", $correo);
     $verificar->execute();
     $verificar->store_result();
@@ -35,11 +37,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         echo "<script>alert('Este correo ya está registrado');window.location.href='index.html';</script>";
     } else {
         $contrasena_segura = password_hash($contrasena, PASSWORD_DEFAULT);
-        $ya_voto_personeria = 0;
-        $ya_voto_contraloria = 0;
 
-        $stmt = $conn->prepare("INSERT INTO usuarios (correo, contrasena, nombre_completo, ya_voto_personeria, ya_voto_contraloria) VALUES (?, ?, ?, ?, ?)");
-        $stmt->bind_param("sssii", $correo, $contrasena_segura, $nombre_completo, $ya_voto_personeria, $ya_voto_contraloria);
+        $stmt = $conn->prepare("INSERT INTO usuario (nombre, numero, direccion, correo, contrasena) VALUES (?, ?, ?, ?, ?)");
+        $stmt->bind_param("sssss", $nombre, $numero, $direccion, $correo, $contrasena_segura);
 
         if ($stmt->execute()) {
             echo "<script>alert('Registro exitoso');window.location.href='index.html';</script>";

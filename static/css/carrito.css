@@ -22,9 +22,12 @@ nav {
 }
 
 .logo {
-    height: 70px;
-    width: auto;
-    margin-right: 40px;
+  position: absolute;
+  left: 20px;
+  top: 5px;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
 }
 
 .menu {
@@ -69,4 +72,22 @@ p {
   font-size: 1.1em;
   color: #444;
   margin-top: 20px;
+}
+
+.inicio-link {
+    background-color: rgb(156, 247, 103);
+    color: black;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.registrarse-link {
+    background-color: rgb(116, 197, 70);
+    color: black;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
 }

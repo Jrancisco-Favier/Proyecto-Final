@@ -1,0 +1,145 @@
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 24px 48px 0 48px;
+}
+
+.logo {
+    height: 70px;
+    width: auto;
+    margin-right: 40px;
+}
+
+.menu {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    gap: 48px;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+.menu li {
+    display: inline;
+}
+
+.menu a {
+    text-decoration: none;
+    color: #222;
+    font-weight: bold;
+    padding: 8px 12px;
+    transition: background 0.2s, color 0.2s;
+}
+
+.menu a:hover,
+.menu .registrarse-link:hover {
+    background: #f0f0f0;
+    color: #5eb805;
+    border-radius: 4px;
+}
+
+/* Botones del menú */
+.inicio-link {
+    background-color: rgb(156, 247, 103);
+    color: black;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.registrarse-link {
+    background-color: rgb(116, 197, 70);
+    color: black;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.superior{
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: #f3cd25;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.content {
+    padding: 50px 20px;
+    text-align: center;
+    color: #333;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.content h1 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+    background: linear-gradient(4deg, #4e4e4e, #000000);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.empresa-container{
+    display: flex;
+    flex-direction: row;
+    flex-wrap:nowrap;
+    justify-content: center;
+    gap: 10px;
+    padding: 5px;
+}
+.vision-contenido{
+    text-align: center;
+    background-color: rgba(182, 255, 64, 0.8);
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s;
+}
+
+.mision{
+    text-align: center;
+}
+
+.titulo{
+    text-align: center;
+}
+
+@media (max-width: 768px) {
+    .menu {
+        display: none;
+    }
+    
+    .algo {
+        display: flex;
+    }
+
+    .content h1 {
+        font-size: 2rem;
+    }
+
+    header {
+        padding: 1rem;
+    }
+}
+.registrarse {
+    background-color: #ffee00;
+    color: rgb(0, 0, 0);
+    padding: 10px 20px;
+    border: none;
+    font-weight: bold;
+    cursor: pointer;
+    border-radius: 20px;
+    transition: background-color 0.3s, transfor 0.3s;
+    font-size: 1.5ch;
+}
+
+.registrarse:hover {
+    background-color: #e5ff00;
+    transition: background-color 1.1s; transform: 1s;
+}
